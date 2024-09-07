@@ -1,2 +1,18 @@
-@use "../../presets" as *;
-@use "../../mixins" as *;
+// @use "../../presets" as *;
+// @use "../../mixins" as *;
+
+.header-menu {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @extend %container;
+    gap: $gap;
+  }
+}
