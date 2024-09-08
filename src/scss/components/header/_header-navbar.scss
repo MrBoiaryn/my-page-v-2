@@ -12,7 +12,7 @@
     display: flex;
     justify-content: flex-end;
 
-    @include unlist;
+    @include unlist(0 -20px 0 0);
   }
 
   &__item {
@@ -25,7 +25,7 @@
     padding: $gap $gap-sm;
 
     transition: color 0.5s ease-in-out;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.09em;
 
     font-size: 18px;
 

@@ -181,11 +181,15 @@ template {
 }
 
 html {
+  overflow-y: scroll;
+
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
 body {
+  letter-spacing: 0.1em;
+
   color: #2d3651;
   background-color: #ffffff;
 }
@@ -196,6 +200,7 @@ h1 {
   font-family: "Roboto Slab", serif;
   font-size: 3.75rem;
   font-weight: 300;
+  line-height: 1.32;
 }
 
 a {
@@ -245,6 +250,8 @@ a {
   color: #ffffff;
   background-color: #2d3651;
   background-image: url(../images/img-header.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .header-content {
@@ -253,7 +260,7 @@ a {
   top: 0;
 }
 .header-content__title {
-  margin: 0 0 66px;
+  margin: 0 0 47px;
 
   text-align: center;
 }
@@ -287,13 +294,13 @@ a {
 }
 
 .header-logo {
-  letter-spacing: 0.25em;
+  letter-spacing: 0.22em;
 
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .header-logo__accent {
-  margin-right: 7px;
-  padding: 17px 5px 17px 5px;
+  margin-right: 4px;
+  padding: 14px 1px 13px 5px;
 
   border: 3px solid #d53d27;
 }
@@ -312,7 +319,7 @@ a {
   -ms-flex-pack: end;
   justify-content: flex-end;
 
-  margin: 0;
+  margin: 0 -20px 0 0;
   padding: 0;
 
   list-style: none;
@@ -327,7 +334,7 @@ a {
 
   -webkit-transition: color 0.5s ease-in-out;
           transition: color 0.5s ease-in-out;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.09em;
 
   font-size: 18px;
 }
