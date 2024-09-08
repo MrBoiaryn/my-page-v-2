@@ -6,14 +6,10 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 250px;
   height: 60px;
 
   transition: background-color 0.5s ease-in-out;
   letter-spacing: 0.1em;
-
-  border: 2px solid $color-white;
-  background-color: rgba($color-white, 0.1);
 
   font-size: 18px;
 
@@ -21,4 +17,22 @@
   &:focus {
     background-color: $color-accent;
   }
+
+  &--light {
+    min-width: 250px;
+
+    border: 2px solid $color-white;
+    background-color: rgba($color-white, 0.1);
+  }
+
+  &--primary {
+    min-width: 350px;
+
+    border: 2px solid $color-primary;
+    background-color: rgba($color-primary, 0.8);
+  }
+}
+
+.hidden {
+  @include visually-hidden;
 }
