@@ -166,6 +166,7 @@ template {
   display: none;
 }
 
+.about__container,
 .header-menu__container,
 .header-content__container {
   max-width: 1340px;
@@ -201,6 +202,13 @@ h1 {
   font-size: 3.75rem;
   font-weight: 300;
   line-height: 1.32;
+}
+
+h2 {
+  color: #2d3651;
+
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
 }
 
 a {
@@ -550,6 +558,51 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
 }
+
+.about {
+  background-color: #e5e5e5;
+}
+
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  gap: 93px;
+}
+.about__content p {
+  position: relative;
+
+  letter-spacing: 0.88px;
+
+  color: #637588;
+
+  line-height: 20.7px;
+}
+.about__content p:first-of-type {
+  margin-top: -5px;
+}
+.about__content p:last-of-type {
+  margin: 0;
+}
+.about__content p:first-of-type::after {
+  position: absolute;
+  top: 0;
+
+  width: 2px;
+  height: 200px;
+
+  content: "";
+
+  background-color: rgba(99, 117, 136, 0.1);
+}
+
+.about__image {
+  margin: auto 0;
+
+  scale: 0.9836;
+}
+
 @media (min-width: 576px) {
   .btn--primary {
     width: 350px;
@@ -564,11 +617,13 @@ a {
     margin-bottom: 30px;
   }
 }
+
 @media (min-height: 691px) {
   .skills__container {
     grid-auto-rows: calc(33.33vh - 13.33px);
   }
 }
+
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -593,9 +648,16 @@ a {
     font-size: 1.25rem;
   }
 }
+
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
+  }
+  h2 {
+    letter-spacing: 4px;
+
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
   .btn--light {
     min-width: 250px;
@@ -610,10 +672,32 @@ a {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
+  .about {
+    padding: 100px 0;
+  }
+  .about__container {
+    gap: 90px;
+  }
+  .about__content h2 {
+    margin: 0 0 48px 0;
+  }
+  .about__content p {
+    font-size: 1.125rem;
+  }
+  .about__content p:first-of-type::after {
+    right: -50px;
+  }
 }
+
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
+  }
+  h2 {
+    letter-spacing: 3px;
+
+    font-size: 2rem;
+    line-height: 1.25;
   }
   .btn--light {
     min-width: 200px;
@@ -626,10 +710,29 @@ a {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     grid-template-columns: repeat(3, 1fr);
   }
+  .about {
+    padding: 80px 0;
+  }
+  .about__container {
+    gap: 40px;
+  }
+  .about__content h2 {
+    margin: 0 0 34px 0;
+  }
+  .about__content p:first-of-type::after {
+    right: -24.5px;
+  }
 }
+
 @media (max-width: 767.8px) {
   h1 {
     font-size: 1.875rem;
+  }
+  h2 {
+    letter-spacing: 2px;
+
+    font-size: 1.5rem;
+    line-height: 32px;
   }
   .btn--light {
     min-width: 170px;
@@ -673,18 +776,36 @@ a {
   .skill-item__title {
     font-size: 1.125rem;
   }
+  .about__image {
+    scale: 0.8708;
+  }
 }
+
 @media (max-width: 767.8px) and (min-width: 576px) {
   .skills__container {
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     grid-template-columns: repeat(2, 1fr);
   }
+  .about {
+    padding: 60px 0;
+  }
+  .about__container {
+    gap: 20px;
+  }
+  .about__content h2 {
+    margin: 0 0 23px 0;
+  }
+  .about__content p:first-of-type::after {
+    right: -18.5px;
+  }
 }
+
 @media (max-height: 690px) {
   .skills__container {
     grid-auto-rows: 216.67px;
   }
 }
+
 @media (max-width: 575.8px) {
   .btn--primary {
     width: 100%;
@@ -705,5 +826,33 @@ a {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
+  }
+  .about {
+    padding: 60px 0;
+  }
+  .about__container {
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+
+    gap: 20px;
+  }
+  .about__content h2 {
+    margin: 0 0 19px 0;
+
+    text-align: center;
+  }
+  .about__content p {
+    line-height: 18.4px;
+  }
+  .about__content p:first-of-type::after {
+    display: none;
+  }
+  .about__image {
+    scale: 0.9836;
   }
 }
