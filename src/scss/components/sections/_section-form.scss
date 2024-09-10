@@ -1,0 +1,96 @@
+@use "../../presets/" as *;
+@use "../../mixins" as *;
+
+.form {
+  background-color: $color-primary;
+
+
+  @include lg-min {
+    padding: 30px 0;
+  }
+
+  @include lg-sm {
+    padding: 20px 0;
+  }
+
+  @include sm {
+    padding: 20px 0;
+  }
+}
+
+.form__container {
+  display: grid;
+  gap: 20px;
+
+  @include md-min {
+    grid-template-areas: "a1 a2 a3";
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  @include md-sm {
+    grid-template-areas: "a1 a1" "a2 a3";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include sm {
+    grid-template-areas: "a1" "a2" "a3";
+    grid-template-columns: 1fr;
+  }
+
+
+  @extend %container;
+}
+
+@for $i from 1 through 3 {
+  .form-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
+}
+
+.form-item__input {
+
+  @include form-input;
+  background-color: rgba($color-white, 0.05);
+
+  &::placeholder {
+    color: rgba($color-white, 0.5);
+  }
+
+  &:focus {
+    background-color: rgba($color-white, 0.15);
+    outline: none;
+  }
+
+  @include lg-min {
+    font-size: 1.125rem;
+    line-height: 39px;
+  }
+
+  @include lg-md {
+    line-height: 1.5em;
+  }
+
+  @include md-sm {
+    font-size: 1.125rem;
+    line-height: 22px;
+  }
+
+  @include sm {
+    font-size: 1.125rem;
+    line-height: 16px;
+  }
+
+}
+
+.form-item__btn {
+  @include form-input;
+  background-color: rgba($color-white, 0.1);
+
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    background-color: $color-accent;
+    border: 2px solid $color-white;
+  }
+}
