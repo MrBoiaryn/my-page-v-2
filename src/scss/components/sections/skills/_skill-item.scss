@@ -23,7 +23,6 @@
     @include md {
       font-size: 1.125rem;
     }
-
   }
 
   &__link {
@@ -35,6 +34,9 @@
     padding: 1em;
 
     transition: color 0.5s ease-in-out;
+
+    letter-spacing: 2px;
+
   }
 
   &__image {
