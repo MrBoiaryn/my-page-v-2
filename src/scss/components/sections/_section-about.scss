@@ -7,15 +7,12 @@
   @include lg-min {
     padding: $gap-x5 0;
   }
-
   @include lg-md {
     padding: $gap-x4 0;
   }
-
   @include md-sm {
     padding: $gap-x3 0;
   }
-
   @include sm {
     padding: $gap-x3 0;
   }
@@ -23,60 +20,56 @@
 
 .about__container {
   display: flex;
-  gap: 93px;
 
+  @extend %container;
+  gap: 93px;
   @include lg-min {
     gap: 90px;
   }
-
   @include lg-md {
     gap: $gap-x2;
   }
-
   @include md-sm {
     gap: $gap;
   }
-
   @include sm {
-    flex-direction: column;
-    gap: $gap;
     align-items: center;
-  }
+    flex-direction: column;
 
-  @extend %container;
+    gap: $gap;
+  }
 }
 
 .about__content {
-
   h2 {
     @include lg-min {
       margin: 0 0 48px 0;
     }
-
     @include lg-md {
       margin: 0 0 34px 0;
     }
-
     @include md-sm {
       margin: 0 0 23px 0;
     }
-
     @include sm {
       margin: 0 0 19px 0;
+
       text-align: center;
     }
   }
 
   p {
     position: relative;
-    color: $color-gray;
+
     letter-spacing: 0.88px;
+
+    color: $color-gray;
+
     line-height: 20.7px;
 
     @include lg-min {
       font-size: 1.125rem;
     }
-
     @include sm {
       line-height: 18.4px;
     }
@@ -92,28 +85,26 @@
 
 
     &:first-of-type::after {
-      content: "";
       position: absolute;
       top: 0;
       // right: -50px;
+
       width: 2px;
       height: 200px;
+
+      content: "";
+
       background-color: rgba($color-gray, 0.1);
 
       @include lg-min {
         right: -50px;
       }
-
       @include lg-md {
         right: -24.5px;
       }
-
       @include md-sm {
         right: -18.5px;
       }
-
-
-
       @include sm {
         display: none;
       }
@@ -123,13 +114,12 @@
 
 .about__image {
   margin: auto 0;
-  scale: 0.9836;
 
   @include md {
     scale: 0.8708;
   }
-
   @include sm {
     scale: 0.9836;
   }
+  scale: 0.9836;
 }
